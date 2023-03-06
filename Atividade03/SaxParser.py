@@ -7,12 +7,9 @@ class Listener(xml.sax.ContentHandler):
     self.nome = ""
     self.latitude = ""
     self.longitude = ""
+    self.hasAmenity = False
 
   def startElement(self, tag, attributes):    
-    self.tipo = ""
-    self.nome = ""
-    self.latitude = ""
-    self.longitude = ""
     
     if tag == "node":
       self.latitude = attributes["lat"]
@@ -20,15 +17,23 @@ class Listener(xml.sax.ContentHandler):
     if tag =="tag":  
       if attributes.get("k") == "amenity":
         self.tipo = attributes.get("v")
+        self.hasAmenity = True
       if attributes.get("k") == "name":
         self.nome = attributes.get("v")
 
   def endElement(self, tag):    
-    if tag =="node":	
+    if tag =="node" and self.hasAmenity:	
+      print("")
+      print("=="*20)
       print("tipo: ", self.tipo)
       print("nome: ", self.nome)
       print("Latitude: ", self.latitude)
       print("Longitude: ", self.longitude)
+      self.hasAmenity = False
+      self.tipo = ""
+      self.nome = ""
+      self.latitude = ""
+      self.longitude = ""
 
 
   def characters(self, content):	
@@ -49,4 +54,6 @@ parser.parse("map.osm")
 
 end = datetime.now() # Fim da contagem do tempo
 
-print("Tempo de execução: (hh:mm:ss.ms) ", end - start)
+print("")
+print("Tempo de execução SAX: (hh:mm:ss.ms) ", end - start)
+print("")

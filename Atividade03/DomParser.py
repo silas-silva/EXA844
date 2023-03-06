@@ -33,4 +33,6 @@ for c in mapDocument.getElementsByTagName("node"):
 
 end = datetime.now() # Fim da contagem do tempo
 
-print("Tempo de execução: (hh:mm:ss.ms) ", end - start)
+print("")
+print("Tempo de execução DOM: (hh:mm:ss.ms) ", end - start)
+print("")
