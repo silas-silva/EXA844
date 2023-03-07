@@ -1,0 +1,62 @@
+{
+    "bank": {
+        "nome": "Banco do Brasil",
+        "latitude": "-12.2230994",
+        "longitude": "-38.9643233"
+    },
+    "marketplace": {
+        "nome": "Feira da Cidade Nova",
+        "latitude": "-12.2254322",
+        "longitude": "-38.9642294"
+    },
+    "post_office": {
+        "nome": "",
+        "latitude": "-12.2232600",
+        "longitude": "-38.9647224"
+    },
+    "pharmacy": {
+        "nome": "",
+        "latitude": "-12.2064885",
+        "longitude": "-38.9693419"
+    },
+    "fast_food": {
+        "nome": "Subway",
+        "latitude": "-12.2250408",
+        "longitude": "-38.9514291"
+    },
+    "restaurant": {
+        "nome": "Gauch\u00e3o",
+        "latitude": "-12.2268807",
+        "longitude": "-38.9532722"
+    },
+    "bar": {
+        "nome": "A Rep\u00fablica",
+        "latitude": "-12.2065410",
+        "longitude": "-38.9670030"
+    },
+    "hospital": {
+        "nome": "SESU",
+        "latitude": "-12.2005129",
+        "longitude": "-38.9742620"
+    },
+    "place_of_worship": {
+        "nome": "",
+        "latitude": "-12.2230012",
+        "longitude": "-38.9575860"
+    },
+    "school": {
+        "nome": "CETV - Col\u00e9gio Estadual Teot\u00f4nio Vilela",
+        "latitude": "-12.2173079",
+        "longitude": "-38.9495999"
+    },
+    "telephone": {
+        "nome": "Farm\u00e1cia Teresinha",
+        "latitude": "-12.2214892",
+        "longitude": "-38.9523375"
+    },
+    "fuel": {
+        "nome": "",
+        "latitude": "-12.2205509",
+        "longitude": "-38.9515378"
+    }
+}

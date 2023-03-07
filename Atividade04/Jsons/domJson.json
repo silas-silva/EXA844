@@ -1,0 +1,65 @@
+{
+    "1": {
+        "tipo": "marketplace",
+        "nome": "Feira da Cidade Nova",
+        "latitude": "-12.2254322",
+        "longitude": "-38.9642294"
+    },
+    "2": {
+        "tipo": "post_office",
+        "latitude": "-12.2232600",
+        "longitude": "-38.9647224"
+    },
+    "3": {
+        "tipo": "restaurant",
+        "nome": "Hikar\u00ed",
+        "latitude": "-12.2162631",
+        "longitude": "-38.9512085"
+    },
+    "4": {
+        "tipo": "fast_food",
+        "nome": "Levi Lanches",
+        "latitude": "-12.2164364",
+        "longitude": "-38.9512215"
+    },
+    "5": {
+        "tipo": "restaurant",
+        "nome": "Fif\u00f3",
+        "latitude": "-12.2045987",
+        "longitude": "-38.9717530"
+    },
+    "6": {
+        "tipo": "restaurant",
+        "nome": "Cantina do m\u00f3dulo 7 - UEFS",
+        "latitude": "-12.2014782",
+        "longitude": "-38.9750405"
+    },
+    "7": {
+        "tipo": "bar",
+        "nome": "Quatro Esta\u00e7\u00f5es",
+        "latitude": "-12.2065462",
+        "longitude": "-38.9668689"
+    },
+    "8": {
+        "tipo": "bar",
+        "nome": "A Rep\u00fablica",
+        "latitude": "-12.2065410",
+        "longitude": "-38.9670030"
+    },
+    "9": {
+        "tipo": "pharmacy",
+        "latitude": "-12.2064885",
+        "longitude": "-38.9693419"
+    },
+    "10": {
+        "tipo": "restaurant",
+        "nome": "Gauch\u00e3o",
+        "latitude": "-12.2268807",
+        "longitude": "-38.9532722"
+    },
+    "11": {
+        "tipo": "telephone",
+        "latitude": "-12.2214892",
+        "longitude": "-38.9523375"
+    }
+}
