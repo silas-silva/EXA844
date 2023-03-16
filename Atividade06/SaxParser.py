@@ -142,7 +142,7 @@ for c in parser.linksAlimentosIndividuaisVitat:
     break
 
 
-print(parser.dicDados)
+#print(parser.dicDados) #Dicionario com os dados
 
 #Salvar dados no arquivo
 with open("Jsons/db.json", 'w' , encoding='utf-8') as database:
