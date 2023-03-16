@@ -133,7 +133,7 @@ for c in parser.linksAlimentosIndividuaisVitat:
     page = requests.get(c)
     parser.feed(page.content.decode('utf-8'))
     cont2 = 0
-    if cont <= aux:
+    if cont >= aux:
       print(f'{cont}')
       aux += 100
   else:
