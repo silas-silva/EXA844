@@ -2,6 +2,7 @@
 
 from html.parser import HTMLParser
 import requests
+import json
 
 listaSites = ['https://vitat.com.br/alimentacao/busca-de-alimentos/mais-buscados']
 
@@ -112,15 +113,37 @@ parser.feed(page.content.decode('utf-8'))
 # Verificar alimentos individuais das paginas filhas da filha
 
 #Mapear todos os links de todos os alimentos
+print(len(parser.linksAlimentosIndividuaisVitat))
+
+cont = 0
+for c in parser.linksCategoriasVitat:
+  cont += 1
+  
+  page = requests.get(c)
+  parser.feed(page.content.decode('utf-8'))
 
 #Pegar dados de cada alimentos
 
 cont = 0
-
+cont2 = 0
+aux = 100
 for c in parser.linksAlimentosIndividuaisVitat:
   cont += 1
-  print(cont)
-  page = requests.get(c)
-  parser.feed(page.content.decode('utf-8'))
+  if c != "https://vitat.com.br/alimentacao/busca-de-alimentos":
+    page = requests.get(c)
+    parser.feed(page.content.decode('utf-8'))
+    cont2 = 0
+    if cont <= aux:
+      print(f'{cont}')
+      aux += 100
+  else:
+    cont2 += 1
+  if cont2 == 30:
+    break
+
 
 print(parser.dicDados)
+
+#Salvar dados no arquivo
+with open("Jsons/db.json", 'w' , encoding='utf-8') as database:
+    json.dump(parser.dicDados, database, indent=4)   
