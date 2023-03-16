@@ -112,13 +112,14 @@ parser.feed(page.content.decode('utf-8'))
 # Verificar alimentos individuais das paginas filhas da filha
 
 #Mapear todos os links de todos os alimentos
-for c in parser.linksCategoriasVitat:
-  page = requests.get(c)
-  parser.feed(page.content.decode('utf-8'))
 
+#Pegar dados de cada alimentos
 
-#Pegar dados de cada alimento
+cont = 0
+
 for c in parser.linksAlimentosIndividuaisVitat:
+  cont += 1
+  print(cont)
   page = requests.get(c)
   parser.feed(page.content.decode('utf-8'))
 
