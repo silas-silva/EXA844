@@ -12,7 +12,11 @@ autor = form.getvalue('autor')
 mensagem = form.getvalue('mensagem')
 data = form.getvalue('data')
 
-dados = {"autor" : autor, "mensagem" : mensagem, "data" : data}
+#Guardar dados do arquivo
+with open("db.json", 'r' , encoding='utf-8') as database:
+    dados = json.load(database)
+
+dados[autor] = {"mensagem" : mensagem, "data" : data}
 
 #Salvar no arquivo
 with open("db.json", 'w' , encoding='utf-8') as database:
