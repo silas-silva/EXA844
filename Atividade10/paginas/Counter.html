@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Count Page</title>
+  </head>
+  <body>
+    Contador de requisições HIDDEN: {{counterHidden}} <br />
+    Contador de requisições COOKIES:{{counterCookies}} <br />
+
+    <p>
+      Hello {{username}}! 
+      <span style="display: {{ 'none' if show == 'block' else 'block' }}">Your session will expire in {{session}} seconds <span/>.
+    </p>
+    <br />
+    <form action="/" method="GET">
+      <input type="hidden" name="counter" value="{{counterHidden}}" />
+      <input type="submit" value="Enviar" placeholder="Contador" />
+    </form>
+    <br />
+    <div style="display: {{show}}">
+      <form method="post" action="/login">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required />
+        <br />
+        <br />
+        <input type="submit" value="Login" />
+      </form>
+    </div>
+  </body>
+</html>
